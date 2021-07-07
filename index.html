@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Calci</title>
+   <script>
+      function dis(val)
+         {
+             document.getElementById("result").value+=val
+         }
+        
+         function solve()
+         {
+             let x = document.getElementById("result").value
+             let y = eval(x)
+             document.getElementById("result").value = y
+         }
+         
+         function clr()
+         {
+             document.getElementById("result").value = ""
+         }
+   </script>
+   <style>
+      body{
+         background-color:#FA9AF1 ;
+      }
+      table{
+         border-spacing: 0 15px;
+      }
+      td{
+         padding: 5px;
+      }
+
+      .title{
+         margin-bottom: 10px;
+         text-align: center;
+         width: 100%;
+         height: 25%;
+         color:#FB4704 ;
+         font-size: 50px;
+         background-color: yellow;
+      }
+      input[type="button"]{
+         background-color:#16FB04 ;
+         color: black;
+         border: solid black 2px;
+         width: 100%;
+         cursor: pointer;
+         font-size: 50px;
+         border-radius: 8px;
+      }
+      input[type="button"]:hover{
+         background-color:#06F6DE ;
+      }
+      input[type="text"]
+      {
+         background-color: white;
+         border: solid black 2px;
+         width: 100%;
+         line-height: 4em;
+         font-size: 25px;
+
+      }
+      
+      @media(max-width: 800px){
+      .container{
+         display: flex;
+
+
+      }}
+
+   </style>
+</head>
+
+<body><div class="container">
+   
+   
+   <div class="title">Simple<br> Calci</div>
+<center><table border="1"><tr>
+
+   <td colspan="3"><input type="text" id="result" size="23" >&nbsp&nbsp&nbsp</td>
+   <td><input type="button" value="C" onclick="clr()">&nbsp&nbsp&nbsp</td></tr>
+   <tr>
+      <td><input type="button" value="1" onclick="dis('1')">&nbsp&nbsp&nbsp</td>
+      <td><input type="button" value="2" onclick="dis('2')">&nbsp&nbsp&nbsp</td>
+      <td><input type="button" value="3" onclick="dis('3')">&nbsp&nbsp&nbsp</td>
+      <td><input type="button" value="+" onclick="dis('+')">&nbsp&nbsp&nbsp</td>
+   </tr>
+   <tr>
+      
+      <td><input type="button" value="4" onclick="dis('4')">&nbsp&nbsp&nbsp</td>
+      <td><input type="button" value="5" onclick="dis('5')">&nbsp&nbsp&nbsp</td>
+      <td><input type="button" value="6" onclick="dis('6')">&nbsp&nbsp&nbsp</td>
+      <td><input type="button" value="-" onclick="dis('-')">&nbsp&nbsp&nbsp</td>
+   </tr>
+   
+   <tr><td><input type="button" value="7" onclick="dis('7')">&nbsp&nbsp&nbsp</td>
+      <td><input type="button" value="8" onclick="dis('8')">&nbsp&nbsp&nbsp</td>
+      <td><input type="button" value="9" onclick="dis('9')">&nbsp&nbsp&nbsp</td>
+      <td><input type="button" value="*" onclick="dis('*')">&nbsp&nbsp&nbsp</td>
+   </tr>
+   <tr><td><input type="button" value="." onclick="dis('.')">&nbsp&nbsp&nbsp</td>
+      <td><input type="button" value="0" onclick="dis('0')">&nbsp&nbsp&nbsp</td>
+      <td><input type="button" value="=" onclick="solve()">&nbsp&nbsp&nbsp</td>
+      <td><input type="button" value="/" onclick="dis('/')">&nbsp&nbsp&nbsp</td>
+   </tr>
+</table></center>
+
+<div><img src="images/kolu.png" width="200px" height="200px" style="margin-top: -10%;margin-left: 50px;border-radius: 100%;"></div>
+</div>
+<div><img src="images/titoo.png" width="200px" height="200px" style="margin-top: -10%;border-radius: 100%;margin-right: 50px;"></div>
+</div>
+</body>
+</html>
